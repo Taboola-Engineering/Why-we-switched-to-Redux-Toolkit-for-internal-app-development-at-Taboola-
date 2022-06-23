@@ -1,0 +1,9 @@
+import { createAction } from '@reduxjs/toolkit'
+ 
+const incrementCounter = createAction('counter/increment')
+const decrementCounter = createAction('counter/decrement')
+ 
+const incrementAction = incrementCounter(4);
+// { type: 'counter/increment', payload: 4 }
+const decrementAction = decrementCounter(2);
+// { type: 'counter/decrement', payload: 2 }
