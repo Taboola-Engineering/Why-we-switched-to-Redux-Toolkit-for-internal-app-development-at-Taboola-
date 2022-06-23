@@ -1,0 +1,17 @@
+const INCREMENT = 'increment';
+const DECREMENT = 'decrement';
+ 
+export const incrementCounter = (value) => ({
+ type: INCREMENT,
+ payload: value,
+});
+ 
+export const decrementCounter = (value) => ({
+ type: DECREMENT,
+ payload: value,
+});
+ 
+const incrementAction = incrementCounter(4);
+// { type: 'increment', payload: 4 }
+const decrementAction = decrementCounter(2);
+// { type: 'decrement', payload: 2 }
